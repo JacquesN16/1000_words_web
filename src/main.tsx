@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import './index.scss'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {routes} from "./constants/route.ts";
-import Main from "./components/02_Main/Main.tsx";
-import Word from "./components/03_Word/Word.tsx";
+import Main from "./pages/02_Main/Main.tsx";
+import Word from "./pages/03_Word/Word.tsx";
 
 const router = createBrowserRouter([
     {

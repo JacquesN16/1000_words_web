@@ -9,14 +9,14 @@ function App() {
         navigate(routes.main)
     }
 
-  return (
-    <div className='fadeIn'>
-      <h1>1000 words</h1>
-        <button onClick={handleClick}>
-            Go
-        </button>
-    </div>
-  )
+    return (
+        <div className='fadeIn'>
+            <h1>1000 words</h1>
+            <button onClick={handleClick}>
+                Go
+            </button>
+        </div>
+    )
 }
 
 export default App
