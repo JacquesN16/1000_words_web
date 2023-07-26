@@ -1,5 +1,8 @@
 import {useParams} from "react-router-dom";
-import { useEffect, useState} from "react";
+import {useEffect, useState} from "react";
+import constants from "../../utils/constants.ts";
+import Utils from "../../utils/utils.ts";
+
 interface Audio {
     audio?: string
     text: string
@@ -24,7 +27,7 @@ interface Definitions {
 }
 export default function Word() {
     const params = useParams()
-    const [data, setData] = useState<Definitions[]>([])
+    // const [data, setData] = useState<Definitions[]>([])
 
 
     const renderDefAndExample = (data: Definitions[]) => {
@@ -42,25 +45,27 @@ export default function Word() {
     }
 
 
-    const getData = async (word: string) => {
-        // "https://dictionaryapi.dev/"
-        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        const jsonData = await response.json();
-        setData(jsonData)
-    }
 
 
 
-    useEffect(() => {
-        if(params.word){
-            getData(params.word)
-        }
-    },[params.word])
+
+// Example usage:
+
+
+
+
+    // useEffect(() => {
+    //     if(params.word){
+    //         getData(params.word)
+    //     }
+    // },[params.word])
 
 
     return (
         <>
-            <h1>Word</h1>
+            <div>
+                <span> Words of the Day : {Utils.renderToday()} </span>
+            </div>
             <p>{params.word}</p>
             {renderDefAndExample(data)}
         </>

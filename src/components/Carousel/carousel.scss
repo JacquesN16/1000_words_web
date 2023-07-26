@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+.carousel-container{
+  width: 80%;
+  margin: 0 auto;
+  .carousel-controls{
+    display: flex;
+    justify-content: space-between;
+    .carousel-text-container{
+      color: $text-color-white;
+      font-family: 'Kaisei Decol';
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 46.667% */
+      letter-spacing: 3px;
+    }
+
+  }
+}
+
+.carousel-indice-container{
+  color: $text-color-white;
+  font-family: "Kadwa";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 2rem;
+}
+.custom-arrow{
+  border: none !important;
+  :active,
+  :focus,
+  :hover,
+  :focus-visible{
+    outline: none !important;
+    border: none !important;
+    color: $text-color-grey !important;
+  }
+}

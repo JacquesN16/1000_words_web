@@ -6,6 +6,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {routes} from "./constants/route.ts";
 import Main from "./pages/02_Main/Main.tsx";
 import Word from "./pages/03_Word/Word.tsx";
+import About from "./pages/04_About/About.tsx";
 
 const router = createBrowserRouter([
     {
@@ -19,11 +20,13 @@ const router = createBrowserRouter([
     {
         path: routes.word,
         element: <Word/>,
-    }
+    },
+    {   path: routes.about,
+        element: <About/>},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-      <RouterProvider router={router} />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <RouterProvider router={router}/>
+    </React.StrictMode>,
 )
